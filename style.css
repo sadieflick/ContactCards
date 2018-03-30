@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    width: 850px;
+    background: white;
+    margin: 0 auto;
+}
+
+#leftSide {
+    display: inline-block;
+    width: 300px;
+}
+
+.nameEntry {
+    display: block;
+    margin: 10px;
+}
+
+#descEntry {
+    margin: 20px 20px 10px 0px;
+    display: block;
+
+}
+
+#rightSide {
+    margin-right: 20px;
+    margin-top: 15px;
+    width: 300px;
+    display: inline-block;
+    background-color: grey;
+    vertical-align: top;
+}
+#contactCards {
+    height: 200px;
+    border: 2px solid black;
+    margin: 5px;
+}

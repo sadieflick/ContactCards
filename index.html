@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Enter Title Here</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+		$(document).ready(function(){
+            $(document).on("submit", "#inputForm", function(event) {
+
+                var firstName = $("#first").val();
+                var lastName = $("#last").val();
+                var descriptData = $("#description").val();
+                var contactInfo = "<div id='contactCards'><h1>"+firstName+" "+lastName+"</h1>\
+                    <p> Click for description!</p></div>"
+
+                $("#rightSide").append(contactInfo);
+                $(document).on("click", "#contactCards", function(){
+                    $(this).html("<p>"+descriptData+"</p>");
+                });
+                event.preventDefault();
+            });
+		});
+        </script>
+        
+	</head>
+	<body>
+		<div id="wrapper">
+            <div id=leftSide>
+
+                <form id="inputForm">
+                    <div class=nameEntry>
+                        <label for="first" class="labelFor">First Name: </label>
+                        <input type="text" class="inputBox" name="first" id="first"/>
+                    </div>
+                    <div class=nameEntry>
+                        <label for="last" class="labelFor">Last Name: </label>
+                        <input type="text" class="inputBox" name="last" id="last"/>
+                    </div>
+
+                    <div id=descEntry>
+                        <label for="description" class="labelFor">Description:</label>
+                        <textarea id=description></textarea>
+                    </div>
+                    <input type="submit" value="Add User">
+                </form>
+
+            </div><!--End left side-->
+
+            <div id="rightSide">
+            </div>
+            
+        </div><!--end of wrapper-->
+	</body>
+</html>
+
+
